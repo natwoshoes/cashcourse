@@ -1,5 +1,6 @@
 import streamlit as st
 
+
 st.markdown("""
 <style>       
         
@@ -47,9 +48,14 @@ st.write("Credit, at its core, is the act of borrowing money from lenders (like 
 tabs = st.tabs(["Credit Score", "Credit Cards", "Collection, Fees, and Debt"])
  
 with tabs[0]:
-    st.markdown("### What is it?")
-    st.write("Everyone using credit is assigned a credit score: a type of financial report card. It tells lenders how trustworthy (also called creditworthiness) you are when it comes to paying back the money you owe (your debt). A FICO score, from the Fair Isaac Corporation, is the most commonly used credit model. Your score is ranked from 300-800. The higher your score, the better your credit is, and the more likely you are to be approved for loans or credit cards with lower interest rates.")
+    col1, col2 = st.columns(2)
+    
 
+    with col1:
+        st.markdown("### What is it?")
+        st.write("Everyone using credit is assigned a credit score: a type of financial report card. It tells lenders how trustworthy (also called creditworthiness) you are when it comes to paying back the money you owe (your debt). A FICO score, from the Fair Isaac Corporation, is the most commonly used credit model. Your score is ranked from 300-800. The higher your score, the better your credit is, and the more likely you are to be approved for loans or credit cards with lower interest rates.")
+    with col2:
+        st.image("Graphics/money.png")
     st.markdown("### What goes into a credit score?")
     st.write("Your credit score is affected by many factors:")
     st.markdown("""
@@ -62,11 +68,17 @@ with tabs[0]:
     
 
 with tabs[1]:
-    st.markdown("### What is it?")
-    st.write("Most commonly, people utilize credit by opening a credit card. A credit card is like a loan that you can keep using up to a certain limit, as long as you make regular payments to pay it down. Imagine it like a revolving door—each time you pay back what you owe, your limit to how much you borrow goes back up. The more consistent you are with ")
+    col1,col2 = st.columns(2)
+
+    with col1: 
+     st.markdown("### What is it?")
+     st.write("Most commonly, people utilize credit by opening a credit card. A credit card is like a loan that you can keep using up to a certain limit, as long as you make regular payments to pay it down. Imagine it like a revolving door—each time you pay back what you owe, your limit to how much you borrow goes back up. The more consistent you are with ")
+     
+    with col2:
+        st.image("Graphics/credit.jpeg")
+
     st.write("Credit cards let you make purchases now and then pay later. However, if you don’t pay the full amount by the due date, you’ll have to pay interest, which can add up quickly. They are very convenient, but because of this, there is a large risk of falling into credit card debt, which can significantly lower your credit score as mentioned above.")
     st.write("To open a credit card, you must apply through a bank of your choice. Be selective when applying as each application may lower your credit score if you get denied!")
-    
     st.markdown("### What kinds are there?")
     st.write("There are many different **types of credit cards** availables-- all with different benefits. These below are helpful starting points.")
 
@@ -80,15 +92,27 @@ with tabs[1]:
     """)
 
 with tabs[2]:
-    st.markdown("### What is it?")
-    st.write("If you don’t manage your credit properly, it can lead to serious financial consequences, including accumulating high levels of debt. When you carry a balance on your credit card from month to month (meaning you don’t pay off the full amount), the credit card company charges interest on what you owe. This interest is often very high—sometimes 20% or more—making it easy to fall deeper into debt.")
-    st.write("On top of interest, there may be fees like late payment fees, over-the-limit fees, or annual fees that can add up quickly. If you don’t make at least the minimum payment on time, your credit score will drop, and it will be harder to get approved for loans or other credit in the future.")
-    st.write("If your credit card debt continues to grow and you still can’t make the payments, the credit card company may send your account to collections. This means they will hire a collection agency to try to get you to pay what you owe. Collection agencies can be persistent, calling you repeatedly and even reporting your unpaid debt to the credit bureaus, which can damage your credit for years. Poor credit can make it harder to rent an apartment, buy a car, or even get a job.")
-    st.write("To avoid all of this, it’s important to understand how credit cards work, use them responsibly, and always make at least the minimum payment to avoid falling into debt. If you do find yourself struggling, it’s better to reach out for help early—there are programs and professionals who can assist in managing or reducing debt!")
+ col1, col2 = st.columns(2)
+with col1:
+        st.markdown("### What is it?")
+        st.write("If you don’t manage your credit properly, it can lead to serious financial consequences, including accumulating high levels of debt. When you carry a balance on your credit card from month to month (meaning you don’t pay off the full amount), the credit card company charges interest on what you owe. This interest is often very high—sometimes 20% or more—making it easy to fall deeper into debt.")
 
+with col2:
+        st.image("Graphics/debt.png")
+    
+        
+        st.write("On top of interest, there may be fees like late payment fees, over-the-limit fees, or annual fees that can add up quickly. If you don’t make at least the minimum payment on time, your credit score will drop, and it will be harder to get approved for loans or other credit in the future.")
+
+with col1:
+    st.image("Graphics/debt2.png")
+
+with col2:
+    st.write("If your credit card debt continues to grow and you still can’t make the payments, the credit card company may send your account to collections. This means they will hire a collection agency to try to get you to pay what you owe. Collection agencies can be persistent, calling you repeatedly and even reporting your unpaid debt to the credit bureaus, which can damage your credit for years. Poor credit can make it harder to rent an apartment, buy a car, or even get a job.")
+
+st.write("To avoid all of this, it’s important to understand how credit cards work, use them responsibly, and always make at least the minimum payment to avoid falling into debt. If you do find yourself struggling, it’s better to reach out for help early—there are programs and professionals who can assist in managing or reducing debt!")
 
 st.markdown(
-    "<h2 style='text-align: center;'>Credit Card Decision Game </h2>",
+    "<h2 style='text-align: center;'>Credit Card Decision Simulator 🎮💸 </h2>",
     unsafe_allow_html=True
 )
 
@@ -172,3 +196,5 @@ with st.expander("3. Summary :", expanded=True):
     st.write("Track your credit card balance, credit score, and see the effects of your decisions.")
     st.write(f"**Current Balance:** ${st.session_state.balance}")
     st.write(f"**Current Credit Score:** {st.session_state.credit_score}")
+
+

@@ -80,3 +80,10 @@ with st.expander ("Need more resources?"):
     st.video(VIDEO_URL)
     st.write ("This video will take you througth the basics of financial literacy")
     st.write ("We have added a repository with more resources")
+    st.write ("Still didn't get it? This Lecture will help you nevigate through the FUNDAMENTALS of  ")
+    VIDEO_URL1 = "https://www.youtube.com/watch?v=uTbVWfdgXUY"
+    st.video(VIDEO_URL1)
+    
+
+
+
