@@ -66,7 +66,8 @@ st.write("Just click on the widgets below to access information, quizzes, resour
 st.write("")
 c1 = st.container()
 with c1:
-    c1.page_link("pages/federal_aid.py", label="Federal Student Aid", icon="🤝")
+    c1.page_link("pages/federal_student_aid.py", label="Federal Student Aid", icon="🏛️")
+    c1.page_link("pages/student_loan_repayment.py", label="Federal Student Loan Repayment", icon="🏦")
     c1.page_link("pages/credit.py", label="Building Credit", icon="💳")
     c1.page_link("pages/retirement.py", label="Investing for Retirement", icon="💰")
 
