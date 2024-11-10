@@ -27,7 +27,6 @@ def create_flashcards():
     st.markdown("## 📚 Study Credit Terms with Flashcards")
     st.write("Test your knowledge by flipping through these flashcards!")
     
-    # Style the flashcard container
     st.markdown("""
         <style>
         .flashcard {
