@@ -38,7 +38,6 @@ with st.expander("Click Here To See!"):
 
 # Create tabs for federal aid types
 tabs = st.tabs(["Pell Grant", "Work Study", "Outside Scholarships", "Direct Subsidized Loans", "Direct Subsidized Loans"])
- 
 with tabs[0]:
     st.markdown("### Abstract")
     st.write("The Federal Pell Grant is a need-based financial aid program for undergraduate students with financial need. It provides non-repayable funds to help cover college costs.")
@@ -63,19 +62,28 @@ with tabs[0]:
 with tabs[1]:
     st.markdown("### Brief")
     st.write("The Federal Work-Study (FWS) Program provides part-time jobs for undergraduate and graduate students with financial need to help pay for education-related expenses. Jobs are available on-campus (e.g., library or lab assistant) or off-campus (e.g., nonprofit or government organizations), often related to the student's field of study.")
-    st.markdown("### Details")
-    st.markdown("""
-    - **Eligibility :** 
-        - *Requires financial need (determined by FAFSA), half-time enrollment, and satisfactory academic progress.*
-    - **Earnings :** 
-        - *Students earn at least minimum wage, working up to 20 hours/week during the school year (more during breaks). Earnings go directly to students.*
-    - **Benefits :** 
-        - *Provides job experience, helps reduce reliance on loans, and allows students to earn money without affecting future financial aid eligibility.*
-    - **Limitations :** 
-        - *Funding is limited, and not all eligible students will receive FWS jobs.*
-    - **How to Apply :** 
-        - *Complete the FAFSA, then search for jobs through the school’s student employment office.*
-    """)
+    col1, col2 = st.columns(2)
+
+    with col1 :
+        st.image("Graphics/guy_with_money_next_to_grad.png", width=325)
+        st.markdown("### Details")
+        st.markdown("""
+        - **Eligibility :** 
+            - *Requires financial need (determined by FAFSA), half-time enrollment, and satisfactory academic progress.*
+        """)
+    
+    with col2:
+        st.markdown("""
+        - **Earnings :** 
+            - *Students earn at least minimum wage, working up to 20 hours/week during the school year (more during breaks). Earnings go directly to students.*
+        - **Benefits :** 
+            - *Provides job experience, helps reduce reliance on loans, and allows students to earn money without affecting future financial aid eligibility.*
+        - **Limitations :** 
+            - *Funding is limited, and not all eligible students will receive FWS jobs.*
+        - **How to Apply :** 
+            - *Complete the FAFSA, then search for jobs through the school’s student employment office.*
+        """)
+         
 
 with tabs[2]:
     st.markdown("### Summary")
@@ -100,28 +108,36 @@ with tabs[2]:
     3. **Tips :** 
         - *Avoid scams (never pay to apply). Apply to multiple scholarships. Stay organized and track deadlines.*
     """)
+    
+    with tabs[3]:
+     st.markdown("### Description")
+     st.write("The Federal Direct Subsidized Loan is a need-based loan for undergraduate students that helps pay for college costs. The government covers the interest while the student is in school, during the 6-month grace period after graduation, and during deferment.")
+     col1, col2 = st.columns(2)
 
-with tabs[3]:
-    st.markdown("### Description")
-    st.write("The Federal Direct Subsidized Loan is a need-based loan for undergraduate students that helps pay for college costs. The government covers the interest while the student is in school, during the 6-month grace period after graduation, and during deferment.")
-    st.markdown("### Facts")
-    st.markdown("""
-    - **Eligibility :** 
-        - *For undergraduate students with financial need (determined by FAFSA), enrolled at least half-time.*
-    - **Loan Limits :** 
-        - *First-year: Up to 3500 dollars. Second-year: Up to 4500 dollars. Third-year and Beyond: Up to 5500 dollars.*
-            - ***Lifetime limit: 23000 dollars for dependent students.***
-    - **Interest Rate :** 
-        - *Fixed at 5.50% (for 2023-2024).*
-    - **Benefits :** 
-        - *Lower cost due to government-paid interest while in school, fixed interest rates, and flexible repayment options.*
-    - **Repayment :** 
-        - *Starts 6 months after graduation or dropping below half-time.*
-    - **Limitations :** 
-        - *Available only to undergraduates, with borrowing limits and eligibility for up to 150 percent of program length.*
-    - **How to Apply :** 
-        - *Complete the FAFSA to determine eligibility.*
+     with col1 :
+        st.markdown("### Facts")
+        st.markdown("""
+        - **Eligibility :** 
+            - *For undergraduate students with financial need (determined by FAFSA), enrolled at least half-time.*
+        - **Loan Limits :** 
+            - *First-year: Up to 3500 dollars. Second-year: Up to 4500 dollars. Third-year and Beyond: Up to 5500 dollars.*
+                - ***Lifetime limit: 23000 dollars for dependent students.***
+        - **Interest Rate :** 
+            - *Fixed at 5.50% (for 2023-2024).*
+        - **Benefits :** 
+            - *Lower cost due to government-paid interest while in school, fixed interest rates, and flexible repayment options.*
     """)
+
+    with col2:
+         st.image("Graphics/american_flag_behind_bank.png", width=325)
+         st.markdown("""
+        - **Repayment :** 
+            - *Starts 6 months after graduation or dropping below half-time.*
+        - **Limitations :** 
+            - *Available only to undergraduates, with borrowing limits and eligibility for up to 150 percent of program length.*
+        - **How to Apply :** 
+            - *Complete the FAFSA to determine eligibility.*
+        """)
 
 with tabs[4]:
     st.markdown("### Highlight")
