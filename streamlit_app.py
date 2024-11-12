@@ -59,7 +59,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 with st.container():
-    st.title("Welcome to [App Title]")
+    st.title("Welcome to Cash Course")
 
 st.write("Navigating finances for the first time can feel overwhelming, especially as a first-generation or low-income student. Our goal is to provide clear, practical information on financial topics to help you make informed decisions. From understanding student aid to managing credit and planning for retirement, we're here to support you every step of the way.")
 st.write("Just click on the widgets below to access information, quizzes, resources, and more about the topics you'd wish to get familiar with")
